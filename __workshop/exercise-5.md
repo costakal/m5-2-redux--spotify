@@ -6,7 +6,7 @@ What if the user goes to the home route, `localhost:3000/`? We can use `Redirect
 
 You'll need the Spotify ID for a musician you like. You can figure this out by googling "spotify [artist name]". The first search result should be the Spotify artist page. The artist's Spotify ID can be found in the URL:
 
-![screenshot showing the Spotify artist ID in the URL](./__lecture/assets/spotify-id.png)
+![screenshot showing the Spotify artist ID in the URL](../__lecture/assets/spotify-id.png)
 
 While testing, you'll hear a fair amount of their music, so pick something good!
 
