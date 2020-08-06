@@ -150,6 +150,6 @@ You will need to manipulate the data somewhat, in the following ways:
 
 In the end, you should have something like this:
 
-<img src="./__lecture/assets/initial-profile.png" alt="Finished app" />
+<img src="../__lecture/assets/initial-profile.png" alt="Finished app" />
 
 > Remember, the first time this renders, you won't have an artist yet! You can render a fallback, like the text "Loading...", until you have an artist you can use.
