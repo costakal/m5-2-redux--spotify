@@ -22,19 +22,19 @@ The very first time you do this, you'll need to agree to the terms of service.
 
 We need to create an "app". Essentially, we need to tell Spotify what we want to do with its API. In return, it will give us some API keys we can use.
 
-![Spotify create screen](./__lecture/assets/spotify-create.png)
+![Spotify create screen](../__lecture/assets/spotify-create.png)
 
 Enter something like the following:
 
-![Spotify Wizard](./__lecture/assets/spotify-wizard-1.png)
+![Spotify Wizard](../__lecture/assets/spotify-wizard-1.png)
 
 You'll be asked if this is a commercial or non-commercial application. Select **non-commercial**.
 
-![Spotify Wizard](./__lecture/assets/spotify-wizard-2.png)
+![Spotify Wizard](../__lecture/assets/spotify-wizard-2.png)
 
 Afterwards, you should be taken to the app's home screen. This page will give us our Client ID and our Secret (we'll need to click "Show client secret" to reveal it):
 
-![Spotify keys](./__lecture/assets/spotify-keys.png)
+![Spotify keys](../__lecture/assets/spotify-keys.png)
 
 ## Storing keys
 
