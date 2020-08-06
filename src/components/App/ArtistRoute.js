@@ -70,19 +70,21 @@ const ArtistRoute = () => {
             <ArtistName>{currentArtist.profilePage.name}</ArtistName>
             <Followers>
               {abbreviateNumber(currentArtist.profilePage.followers.total)}
-              <span> followers</span>
+              <span>{"followers"}</span>
             </Followers>
           </Header>
           <Tags>
             <TagTitle>Tags</TagTitle>
-            <Tag1>
-              <div></div>
-              {currentArtist.profilePage.genres[0]}
-            </Tag1>
-            <Tag2>
-              <div></div>
-              {currentArtist.profilePage.genres[1]}
-            </Tag2>
+            <TagDisplay>
+              <Tag1>
+                <div></div>
+                {currentArtist.profilePage.genres[0]}
+              </Tag1>
+              <Tag2>
+                <div></div>
+                {currentArtist.profilePage.genres[1]}
+              </Tag2>
+            </TagDisplay>
           </Tags>
         </Wrapper>
       ) : (
@@ -106,7 +108,6 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
-  display: flex;
   position: absolute;
   width: 268px;
   height: 215px;
@@ -114,12 +115,12 @@ const Header = styled.div`
   top: 59px;
 `;
 
-const ArtistName = styled.h2`
-  position: absolute;
-  width: 268px;
-  height: 59px;
-  left: 0px;
-  top: 173px;
+const ArtistName = styled.p`
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 100px;
+  z-index: 1;
 
   font-family: Montserrat;
   font-style: normal;
@@ -141,19 +142,17 @@ const ArtistImage = styled.img`
   position: absolute;
   width: 175px;
   height: 175px;
-  left: 104px;
-  top: 59px;
+  left: 43px;
+  top: 20px;
+  z-index: 0;
 
-  background: url(image.png);
   border-radius: 190.5px;
 `;
 
 const Followers = styled.h3`
-  position: absolute;
-  width: 93px;
-  height: 17px;
-  left: 141px;
-  top: 257px;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
 
   font-family: Montserrat;
   font-style: normal;
@@ -166,12 +165,14 @@ const Followers = styled.h3`
 
   color: #ff4fd8;
   span {
+    padding-left: 8px;
     color: white;
   }
 `;
 
 const Tags = styled.div`
-  /* position: absolute; */
+  position: absolute;
+
   width: 253px;
   height: 79px;
   left: 61px;
@@ -179,11 +180,9 @@ const Tags = styled.div`
 `;
 
 const TagTitle = styled.h4`
-  position: absolute;
-  width: 48px;
-  height: 26px;
-  left: 164px;
-  top: 478px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
 
   font-family: Montserrat;
   font-style: normal;
@@ -199,22 +198,19 @@ const TagTitle = styled.h4`
   color: #ffffff;
 `;
 
+const TagDisplay = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+
 const Tag1 = styled.p`
-  position: absolute;
-  width: 93px;
-  height: 29px;
-  left: 61px;
-  top: 528px;
+  padding: 7px;
   background: rgba(75, 75, 75, 0.4);
   border-radius: 4px;
 `;
 
 const Tag2 = styled.p`
-  position: absolute;
-  width: 144px;
-  height: 29px;
-  left: 170px;
-  top: 528px;
+  padding: 5px;
   background: rgba(75, 75, 75, 0.4);
   border-radius: 4px;
 `;

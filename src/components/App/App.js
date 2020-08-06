@@ -14,9 +14,9 @@ import {
   receiveAccessTokenError,
 } from "../../actions";
 
-// const DEFAULT_ARTIST_ID = "46kMeWjz1bYzVPOFqk8u6a";
+const DEFAULT_ARTIST_ID = "4Z8W4fKeB5YxbusRsdQVPb";
 
-const App = (store) => {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -39,8 +39,8 @@ const App = (store) => {
       <GlobalStyles />
       <Router>
         <Switch>
-          {/* <Redirect to={`artist/${DEFAULT_ARTIST_ID}`} /> */}
-          <Route exact path="/artist/:artistId">
+          <Redirect exact from="/" to={`artist/${DEFAULT_ARTIST_ID}`} />
+          <Route path="/artist/:artistId">
             <ArtistRoute />
           </Route>
         </Switch>
